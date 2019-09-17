@@ -1,0 +1,29 @@
+server:
+  port: 7005
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/AireyZXL/config-repo.git
+          username: AireyZXL
+          password: zxl127jks
+          basedir: E:\workSpace\basedir
+  rabbitmq:
+    host: 192.168.88.175
+    port: 5672
+    username: root
+    password: root
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
